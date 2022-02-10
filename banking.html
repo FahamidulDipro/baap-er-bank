@@ -15,8 +15,9 @@
 
     </header>
     <main>
-        <!-- Grid Section -->
-        <section class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-3 justify-items-between align-items-center m-10 w-3/4 mx-auto">
+        <!-- Balance & Transaction  -->
+
+        <section class="grid lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-1 grid-cols-1 gap-3 justify-items-between align-items-center m-10 w-3/4 container mx-auto">
             <div class="bg-teal-400 text-white p-5 rounded-md text-center">
                 <h3 class="text-3xl">Deposit</h3>
                 <h4 class="text-5xl text-center font-bold mt-5">$00</h4>
@@ -31,6 +32,21 @@
             </div>
 
 
+        </section>
+
+        <!-- Deposit & Withdraw -->
+        <section class="flex justify-center align-center w-3/4  bg-gray-300 text-center mx-auto container">
+            <div class="grid grid-cols-2">
+                <div class="mt-5">
+                    <h3 class="text-3xl font-bold">Please deposit</h3>
+                    <div class="mt-5">
+                        <input type="number" id="amount" placeholder="Enter Amount" class="m-5 p-3 rounded-md border-4">
+                        <br>
+
+                        <input type="button" value="Deposit" class="m-5 bg-gray-600 p-3 text-2xl text-white rounded-md cursor-pointer hover:bg-gray-500" id="deposit">
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
