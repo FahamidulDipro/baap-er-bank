@@ -19,9 +19,12 @@ const withdrawBtn = document.getElementById('withdraw-btn');
 const withdrawAmount = document.getElementById('withdraw-amount');
 const withdrawTotal = document.getElementById('withdraw-dollars');
 withdrawBtn.addEventListener('click', function() {
-    withdrawTotal.innerText = withdrawAmount.value;
+    sum = parseFloat(withdrawTotal.innerText);
+    sum += parseFloat(withdrawAmount.value);
+    withdrawTotal.innerText = sum;
+    // withdrawTotal.innerText = withdrawAmount.value;
     var newBalance = parseFloat(balance.innerText);
-    newBalance -= parseFloat(withdrawTotal.innerText);
+    newBalance -= parseFloat(withdrawAmount.value);
     balance.innerText = newBalance;
     withdrawAmount.value = '';
 
