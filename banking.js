@@ -5,19 +5,11 @@ const balance = document.getElementById('balance-dollars');
 // Deposit function
 
 depositBtn.addEventListener('click', function() {
-    sum = parseInt(depositTotal.innerText);
-    sum += parseInt(depositAmount.value);
+    sum = parseFloat(depositTotal.innerText);
+    sum += parseFloat(depositAmount.value);
     depositTotal.innerText = sum;
-
-
-    // var newBalance = parseInt(balance.innerText);
-    // newBalance += parseInt(depositTotal.innerText);
-    // balance.innerText = newBalance;
-    // depositAmount.value = '';
-
-
-    var newBalance = parseInt(balance.innerText);
-    newBalance += parseInt(depositAmount.value);
+    var newBalance = parseFloat(balance.innerText);
+    newBalance += parseFloat(depositAmount.value);
     balance.innerText = newBalance;
     depositAmount.value = '';
 })
@@ -28,8 +20,8 @@ const withdrawAmount = document.getElementById('withdraw-amount');
 const withdrawTotal = document.getElementById('withdraw-dollars');
 withdrawBtn.addEventListener('click', function() {
     withdrawTotal.innerText = withdrawAmount.value;
-    var newBalance = parseInt(balance.innerText);
-    newBalance -= parseInt(withdrawTotal.innerText);
+    var newBalance = parseFloat(balance.innerText);
+    newBalance -= parseFloat(withdrawTotal.innerText);
     balance.innerText = newBalance;
     withdrawAmount.value = '';
 
